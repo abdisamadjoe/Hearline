@@ -1,0 +1,129 @@
+.hl-highlight {
+  background-color: #FFE066;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.hl-rsvp-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.82);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+}
+
+.hl-rsvp-word {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.hl-rsvp-progress {
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  font-family: sans-serif;
+}
+
+.hl-rsvp-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  color: rgba(255,255,255,0.5);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+.hl-summary-overlay {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  background: #ffffff;
+  color: #1a1a1a;
+  z-index: 999999;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.hl-summary-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hl-summary-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hl-summary-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hl-summary-read-btn {
+  background: #FFE066;
+  color: #0f0f0f;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hl-summary-read-btn:hover {
+  background: #f5d656;
+}
+
+.hl-summary-close {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.hl-summary-close:hover {
+  color: #1a1a1a;
+}
+
+.hl-summary-content {
+  padding: 24px;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hl-summary-content p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.hl-summary-content p:last-child {
+  margin-bottom: 0;
+}
