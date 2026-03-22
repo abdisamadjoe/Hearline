@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Hearline — Any page, read aloud.",
-  "version": "1.0",
-  "description": "Read any page aloud with real-time highlighting and RSVP speed reading",
+  "version": "1.0.0",
+  "description": "Hear any webpage aloud, word by word, with real-time highlighting and RSVP speed reading. Free, private, no account needed. Works on any website.",
   "permissions": [
     "activeTab",
     "scripting",
