@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Hearline",
+  "name": "Hearline — Any page, read aloud.",
   "version": "1.0",
   "description": "Read any page aloud with real-time highlighting and RSVP speed reading",
   "permissions": [
@@ -26,16 +26,20 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
   },
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
+  },
+  "commands": {
+    "toggle-hearline": {
+      "suggested_key": {
+        "default": "Alt+H"
+      },
+      "description": "Toggle Hearline"
+    }
   }
 }

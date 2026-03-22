@@ -1,50 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>Hearline — Any page, read aloud.</title>
   <link rel="stylesheet" href="popup.css">
 </head>
-<body>
-  <div class="header">
-    <div class="logo">Hearline</div>
-    <div class="tagline">read smarter</div>
-  </div>
 
-  <div class="card">
-    <div class="section">
-      <div class="pill-group" id="mode-selector">
-        <button class="pill active" data-mode="read">Read Aloud</button>
-        <button class="pill" data-mode="rsvp">RSVP</button>
-        <button class="pill" data-mode="summary">Summary</button>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="pill-group" id="source-selector">
-        <button class="pill active" data-source="full">Full Page</button>
-        <button class="pill" data-source="selection">Selection</button>
-      </div>
-    </div>
-
-    <div class="section speed-section">
-      <div class="speed-header">
-        <label>Speed</label>
-        <span id="speed-display">1.0×</span>
-      </div>
-      <input type="range" id="speed-slider" min="0.5" max="3.0" step="0.25" value="1.0">
-    </div>
-
-    <div class="controls">
-      <button class="btn btn-primary" id="btn-play">Play</button>
-      <div class="controls-row">
-        <button class="btn btn-outline" id="btn-pause">Pause</button>
-        <button class="btn btn-outline" id="btn-stop">Stop</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="status-bar" id="status-display">Ready</div>
-
+<body style="background: #0c1d82; margin: 0; padding: 0;">
+  <!-- Popup is just a trigger, nothing visible -->
   <script src="popup.js"></script>
 </body>
+
 </html>
