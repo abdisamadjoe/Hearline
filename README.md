@@ -37,7 +37,7 @@ No account required. No subscription. No data sent anywhere. Ever.
 
 1. Download or clone this repository
 ```bash
-git clone https://github.com/YOUR-USERNAME/hearline.git
+git clone https://github.com/abdisamadjoe/hearline.git
 ```
 2. Open Chrome and go to `chrome://extensions/`
 3. Turn on **Developer mode** using the toggle in the top right corner
@@ -116,7 +116,7 @@ This project is licensed under the MIT License. You are free to use, modify, and
 
 ## Author
 
-Built by [@YOUR-USERNAME](https://github.com/YOUR-USERNAME)
+Built by [@abdisamadjoe](https://github.com/abdisamadjoe)
 
 ---
 
