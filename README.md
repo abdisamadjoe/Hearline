@@ -1,6 +1,6 @@
 # 🎧 Hearline
 
-> Hear any webpage aloud, word by word, with real-time highlighting. Free, private, no account needed.
+**Hear any webpage aloud, word by word, with real-time highlighting. Free, private, no account needed.**
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-yellow?logo=googlechrome)](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -10,72 +10,74 @@
 
 ## What is Hearline?
 
-Hearline is a free Chrome Extension that reads any webpage aloud while highlighting each word or sentence in real time — like a karaoke cursor for the web. Built for students, professionals, and anyone who learns better by listening.
+Hearline is a free Chrome Extension that reads any webpage out loud while highlighting each sentence in real time. Think of it like a karaoke cursor for the web. It was built for students, professionals, and anyone who learns better by listening.
 
-No account. No subscription. No data sent anywhere. Ever.
+No account required. No subscription. No data sent anywhere. Ever.
 
 ---
 
 ## Features
 
-- 🎧 **Read aloud** — any page or selected text, spoken naturally by your browser
-- ✨ **Real-time highlighting** — follow along as each sentence is spoken
-- ⚡ **RSVP speed reading** — flash one word at a time, up to 3× faster
-- 📄 **Smart summarizer** — extracts key points instantly, no AI API needed
-- 🔒 **100% private** — everything runs locally in your browser
-- 🌐 **Works everywhere** — articles, blogs, Wikipedia, course pages, documentation
+- 🎧 **Read aloud** — reads any page or selected text out loud using your browser's built-in voice
+- ✨ **Real-time highlighting** — follows along and highlights each sentence as it is spoken
+- ⚡ **RSVP speed reading** — flashes one word at a time on screen, up to 3x faster than normal reading
+- 📄 **Smart summarizer** — pulls out the key points from any page instantly, no AI or internet needed
+- 🔒 **100% private** — everything runs inside your browser, nothing is sent to any server
+- 🌐 **Works everywhere** — articles, blogs, Wikipedia, course pages, and documentation sites
 
 ---
 
-## Install
+## How to Install
 
-### From Chrome Web Store *(recommended)*
-👉 [Install Hearline](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
+### Option 1: Chrome Web Store (Recommended)
 
-### Manual Install (Developer Mode)
+👉 [Click here to install Hearline](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
+
+### Option 2: Manual Install
+
 1. Download or clone this repository
 ```bash
 git clone https://github.com/YOUR-USERNAME/hearline.git
 ```
 2. Open Chrome and go to `chrome://extensions/`
-3. Enable **Developer mode** (top right toggle)
+3. Turn on **Developer mode** using the toggle in the top right corner
 4. Click **Load unpacked**
 5. Select the `hearline` folder
-6. Done — the Hearline icon appears in your toolbar
+6. The Hearline icon will appear in your Chrome toolbar
 
 ---
 
 ## How to Use
 
-| Action | How |
+| What you want to do | How to do it |
 |---|---|
-| Read full page | Click the Hearline icon → hit **Play** |
-| Read selected text | Highlight text on page → click icon → **Play** |
-| Speed reading | Switch to **RSVP** mode → Play |
-| Summarize page | Switch to **Summary** mode → Play |
-| Change speed | Drag the speed slider (0.5× to 3×) |
-| Stop | Click **Stop** or press `Escape` |
+| Read the full page | Click the Hearline icon then press **Play** |
+| Read selected text | Highlight text on the page, click the icon, then press **Play** |
+| Speed reading mode | Switch to **RSVP** mode then press **Play** |
+| Summarize the page | Switch to **Summary** mode then press **Play** |
+| Change reading speed | Drag the speed slider between 0.5x and 3x |
+| Stop at any time | Click **Stop** or press the `Escape` key |
 
 ---
 
 ## Privacy
 
-Hearline is fully local. It uses your browser's built-in Web Speech API to generate voice — no text is ever sent to any server. No account is required. No data is collected. No analytics. Nothing.
+Hearline runs entirely on your device. It uses your browser's built-in Web Speech API to generate voice, so no text is ever sent to any server. There is no account to create, no data collected, and no analytics of any kind.
 
-Your reading stays yours.
+Your reading stays completely private.
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
+| Layer | Technology used |
 |---|---|
-| Extension | Chrome Manifest V3 |
-| Speech | Web Speech API (SpeechSynthesisUtterance) |
-| Highlighting | CSS class toggle on DOM nodes |
+| Extension platform | Chrome Manifest V3 |
+| Text to speech | Web Speech API (SpeechSynthesisUtterance) |
+| Highlighting | CSS class toggling on existing DOM nodes |
 | Summarizer | TF-IDF extractive algorithm |
-| Storage | chrome.storage.local |
-| Frameworks | None — pure Vanilla JavaScript |
+| Settings storage | chrome.storage.local |
+| Frameworks | None, pure Vanilla JavaScript |
 
 ---
 
@@ -83,32 +85,32 @@ Your reading stays yours.
 
 ```
 hearline/
-├── manifest.json       — extension config
-├── background.js       — service worker
-├── content.js          — core engine (extract, chunk, speak, highlight)
-├── injected.css        — highlight + RSVP overlay styles
-├── popup.html          — extension popup UI
-├── popup.css           — popup styles
-└── popup.js            — popup controls + messaging
+├── manifest.json       # Extension configuration
+├── background.js       # Service worker
+├── content.js          # Core engine (extract, chunk, speak, highlight)
+├── injected.css        # Highlight and RSVP overlay styles
+├── popup.html          # Extension popup interface
+├── popup.css           # Popup styles
+└── popup.js            # Popup controls and messaging
 ```
 
 ---
 
 ## Contributing
 
-Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
+Contributions are welcome. If you have a feature idea or find a bug, please open an issue first before submitting a pull request.
 
-1. Fork the repo
+1. Fork the repository
 2. Create your branch: `git checkout -b feature/your-feature`
 3. Commit your changes: `git commit -m 'Add your feature'`
-4. Push: `git push origin feature/your-feature`
+4. Push to your branch: `git push origin feature/your-feature`
 5. Open a Pull Request
 
 ---
 
 ## License
 
-MIT — free to use, modify, and distribute.
+This project is licensed under the MIT License. You are free to use, modify, and distribute it.
 
 ---
 
@@ -118,4 +120,4 @@ Built by [@YOUR-USERNAME](https://github.com/YOUR-USERNAME)
 
 ---
 
-*If Hearline helped you, leave a ⭐ on GitHub and a review on the Chrome Web Store — it helps more people find it.*
+If Hearline helped you, please leave a star on GitHub and a review on the Chrome Web Store. It helps more people find the extension.
