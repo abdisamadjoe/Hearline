@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Hearline — Any page, read aloud.",
+  "name": "Hearline — Listen to any webpage",
   "version": "1.0.0",
-  "description": "Hear any webpage aloud with real-time highlighting and RSVP speed reading. Free, private, no account needed.",
+  "description": "Hearline reads any webpage, article or blog out loud with real-time word highlighting.",
   "permissions": [
     "activeTab",
     "storage"
@@ -40,5 +40,15 @@
       },
       "description": "Toggle Hearline"
     }
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "voice_usa.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }

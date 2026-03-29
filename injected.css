@@ -1,196 +1,99 @@
-:root {
-  --hl-primary: #4759f7;
-  --hl-secondary: #0c1d82;
-  --hl-accent: #95a4fc;
-  --hl-white: #ffffff;
-  --hl-overlay: rgba(12, 29, 130, 0.92);
-}
-
 #hl-player {
-  position: fixed;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--hl-overlay);
-  border-radius: 999px;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 2147483647;
-  box-shadow: 0 8px 32px rgba(71, 89, 247, 0.35);
-  border: 1px solid rgba(149, 164, 252, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  min-width: 420px;
-  font-family: system-ui, -apple-system, sans-serif;
-  box-sizing: border-box;
-}
-
-#hl-player * {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-#hl-left, #hl-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  position: fixed !important;
+  right: 24px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 70px !important;
+  height: 350px !important;
+  border-radius: 100px !important;
+  background: #FFFFFF !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  z-index: 2147483647 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  padding: 24px 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 #hl-player button {
-  background: transparent;
-  color: var(--hl-white);
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  transition: background 0.15s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-}
-
-#hl-player button:hover {
-  background: rgba(71, 89, 247, 0.4);
-}
-
-#hl-play-pause {
-  background: var(--hl-primary) !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 50% !important;
-  width: 40px;
-  height: 40px;
+  background: rgba(10, 127, 255, 0.15) !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0A7FFF !important;
+  font-size: 16px !important;
+  transition: all 0.2s ease !important;
   padding: 0 !important;
 }
 
-#hl-divider {
-  width: 1px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.15);
-  margin: 0 4px;
-}
-
-#hl-player select {
-  background: rgba(71, 89, 247, 0.25);
-  color: var(--hl-white);
-  border: 1px solid rgba(149, 164, 252, 0.3);
-  border-radius: 20px;
-  padding: 4px 10px;
-  font-size: 13px;
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-  text-align: center;
-}
-
-#hl-player select:hover {
-  background: rgba(71, 89, 247, 0.35);
-}
-
-#hl-player select option {
-  background: var(--hl-secondary);
-  color: var(--hl-white);
+#hl-player button:hover {
+  background: rgba(10, 127, 255, 0.25) !important;
+  transform: scale(1.05) !important;
 }
 
 #hl-close {
-  color: rgba(255, 255, 255, 0.5) !important;
-  font-size: 18px !important;
-  margin-left: 4px;
-  padding: 4px !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #666 !important;
 }
 
 #hl-close:hover {
-  color: var(--hl-white) !important;
-  background: transparent !important;
+  background: rgba(255, 59, 48, 0.15) !important;
+  color: #FF3B30 !important;
 }
 
-.hl-word.hl-active {
-  background: rgba(149, 164, 252, 0.35) !important;
-  border-radius: 3px !important;
-  padding: 0 2px !important;
-  transition: background 0.08s ease !important;
-  transform: scale(1.02) !important;
-  display: inline-block !important; /* inline-block works better with scale */
-}
-
-.hl-sentence-active {
-  background: rgba(149, 164, 252, 0.2) !important;
-  border-left: 3px solid var(--hl-primary) !important;
-  padding-left: 8px !important;
-}
-
-.hl-para-play {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #4759f7;
-  color: white;
-  font-size: 8px;
-  border: none;
-  cursor: pointer;
+/* Floating Pill Highlighter - Premium & Non-Destructive */
+#hl-word-marker {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: #E7F3FF !important;
+  border-radius: 100px !important;
+  pointer-events: none !important;
+  z-index: 2147483643 !important; 
+  mix-blend-mode: multiply !important;
+  transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1), width 0.1s ease, height 0.1s ease, opacity 0.2s ease !important;
   opacity: 0;
-  transition: opacity 0.2s ease;
-  margin-right: 6px;
-  vertical-align: middle;
-  flex-shrink: 0;
-  position: relative;
-  top: -1px;
-  z-index: 9999;
+  display: none;
 }
 
+/* Word Text Color (Modern Custom Highlight API) */
+::highlight(hl-word-text) {
+  color: #0A7FFF !important;
+  background-color: transparent !important;
+}
+
+/* Para buttons */
 .hl-para-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  min-width: 22px;
-  border-radius: 50%;
-  background: #4759f7;
-  color: #ffffff;
-  font-size: 7px;
-  border: none;
-  cursor: pointer;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  margin-right: 8px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-  z-index: 99999;
-  flex-shrink: 0;
-  line-height: 1;
-  padding: 0;
+  position: absolute !important;
+  left: -40px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: #0A7FFF !important;
+  color: white !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+  z-index: 2147483646 !important;
+  font-size: 14px !important;
 }
 
-.hl-para-btn:hover {
-  background: #95a4fc;
-  transform: scale(1.1) !important;
+.hl-para-btn.hl-visible {
+  opacity: 1 !important;
 }
 
-.hl-highlight {
-  background-color: rgba(149, 164, 252, 0.4) !important;
-  border-radius: 4px !important;
-  box-shadow: 0 0 0 2px rgba(71, 89, 247, 0.3) !important;
-  transition: background-color 0.15s ease !important;
-}
-
-.hl-word {
-  display: inline;
-  border-radius: 3px;
-  padding: 0 1px;
-  transition: background-color 0.08s ease;
-}
-
-.hl-word-active {
-  background-color: rgba(149, 164, 252, 0.5) !important;
-  border-radius: 3px !important;
-  padding: 0 2px !important;
+.hl-relative {
+  position: relative !important;
 }
