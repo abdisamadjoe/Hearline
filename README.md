@@ -1,6 +1,6 @@
 # 🎧 Hearline
 
-**Hear any webpage aloud, word by word, with real-time highlighting. Free, private, no account needed.**
+**Hear any webpage aloud, word by word, with real-time highlighting.**
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-yellow?logo=googlechrome)](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
