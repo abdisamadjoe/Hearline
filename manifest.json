@@ -5,7 +5,6 @@
   "description": "Hear any webpage aloud with real-time highlighting and RSVP speed reading. Free, private, no account needed.",
   "permissions": [
     "activeTab",
-    "scripting",
     "storage"
   ],
   "background": {
