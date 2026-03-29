@@ -1,6 +1,6 @@
-# 🎧 Hearline
+# 🎧 Hearline — Listen to any webpage
 
-**Hear any webpage aloud, word by word, with real-time highlighting.**
+**Hearline reads any webpage, article or blog out loud with real-time word highlighting.**
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-yellow?logo=googlechrome)](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -10,7 +10,7 @@
 
 ## What is Hearline?
 
-Hearline is a free Chrome Extension that reads any webpage out loud while highlighting each sentence in real time. Think of it like a karaoke cursor for the web. It was built for students, professionals, and anyone who learns better by listening.
+Hearline is a free Chrome Extension that reads any webpage out loud while highlighting each word in real time. Think of it like a karaoke cursor for the web. It was built for students, professionals, and anyone who learns better by listening.
 
 No account required. No subscription. No data sent anywhere. Ever.
 
@@ -19,11 +19,11 @@ No account required. No subscription. No data sent anywhere. Ever.
 ## Features
 
 - 🎧 **Read aloud** — reads any page or selected text out loud using your browser's built-in voice
-- ✨ **Real-time highlighting** — follows along and highlights each sentence as it is spoken
-- ⚡ **RSVP speed reading** — flashes one word at a time on screen, up to 3x faster than normal reading
-- 📄 **Smart summarizer** — pulls out the key points from any page instantly, no AI or internet needed
-- 🔒 **100% private** — everything runs inside your browser, nothing is sent to any server
-- 🌐 **Works everywhere** — articles, blogs, Wikipedia, course pages, and documentation sites
+- **Real-time highlighting** — follows along and highlights each word as it is spoken
+- **RSVP speed reading** — flashes one word at a time on screen, up to 3x faster than normal reading
+- **Smart summarizer** — pulls out the key points from any page instantly, no AI or internet needed
+- **100% private** — everything runs inside your browser, nothing is sent to any server
+- **Works everywhere** — articles, blogs, Wikipedia, course pages, and documentation sites
 
 ---
 
@@ -31,7 +31,7 @@ No account required. No subscription. No data sent anywhere. Ever.
 
 ### Option 1: Chrome Web Store (Recommended)
 
-👉 [Click here to install Hearline](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
+[Click here to install Hearline](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
 
 ### Option 2: Manual Install
 
@@ -51,12 +51,11 @@ git clone https://github.com/abdisamadjoe/hearline.git
 
 | What you want to do | How to do it |
 |---|---|
-| Read the full page | Click the Hearline icon then press **Play** |
-| Read selected text | Highlight text on the page, click the icon, then press **Play** |
-| Speed reading mode | Switch to **RSVP** mode then press **Play** |
-| Summarize the page | Switch to **Summary** mode then press **Play** |
-| Change reading speed | Drag the speed slider between 0.5x and 3x |
-| Stop at any time | Click **Stop** or press the `Escape` key |
+| Read the full page | Click the Hearline icon and it starts reading immediately |
+| Jump to a paragraph | Hover over any paragraph and click the play button that appears |
+| Change reading speed | Use the speed selector in the floating player |
+| Pause or resume | Click the pause button in the floating player |
+| Stop at any time | Click the close button or press the `Escape` key |
 
 ---
 
@@ -74,8 +73,7 @@ Your reading stays completely private.
 |---|---|
 | Extension platform | Chrome Manifest V3 |
 | Text to speech | Web Speech API (SpeechSynthesisUtterance) |
-| Highlighting | CSS class toggling on existing DOM nodes |
-| Summarizer | TF-IDF extractive algorithm |
+| Highlighting | Real-time word-level span injection |
 | Settings storage | chrome.storage.local |
 | Frameworks | None, pure Vanilla JavaScript |
 
@@ -88,7 +86,7 @@ hearline/
 ├── manifest.json       # Extension configuration
 ├── background.js       # Service worker
 ├── content.js          # Core engine (extract, chunk, speak, highlight)
-├── injected.css        # Highlight and RSVP overlay styles
+├── injected.css        # Highlight and player styles
 ├── popup.html          # Extension popup interface
 ├── popup.css           # Popup styles
 └── popup.js            # Popup controls and messaging
