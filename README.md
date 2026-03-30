@@ -12,7 +12,8 @@
 
 Hearline is a free Chrome Extension that reads any webpage out loud while highlighting each word in real time. Think of it like a karaoke cursor for the web. It was built for students, professionals, and anyone who learns better by listening.
 
-No account required. No data sent anywhere. Ever.
+No account required. No data sent anywhere.
+
 <img width="1920" height="1080" alt="Chrome - Browsers White Mode" src="https://github.com/user-attachments/assets/3d3e4ac4-3e50-44b2-8071-da9b05814c17" />
 
 ---
