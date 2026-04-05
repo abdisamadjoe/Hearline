@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "description": "Hearline reads any webpage, article or blog out loud with real-time word highlighting.",
   "permissions": [
-    "activeTab",
-    "storage"
+    "activeTab"
   ],
   "background": {
     "service_worker": "background.js"

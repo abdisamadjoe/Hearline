@@ -50,15 +50,44 @@
       NodeFilter.SHOW_TEXT,
       {
         acceptNode(node) {
-          if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          const text = node.nodeValue.trim();
+          if (!text) return NodeFilter.FILTER_REJECT;
+          
           const parent = node.parentElement;
           if (!parent) return NodeFilter.FILTER_REJECT;
           
-          // Skip unwanted elements and hidden nodes
-          if (
-            parent.closest('script, style, noscript, nav, header, footer, aside') ||
-            parent.offsetParent === null
-          ) return NodeFilter.FILTER_REJECT;
+          // 1. Basic Element Exclusions (Hidden, Scripts, Styles, etc.)
+          if (parent.offsetParent === null || parent.closest('script, style, noscript, svg, canvas, map, area')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          // 2. Main Navigation and Structural Exclusions
+          if (parent.closest('nav, header, footer, aside, [role="navigation"], [role="banner"], [role="contentinfo"]')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          // 3. Logo and Branding Detection
+          const isLogo = parent.closest('[class*="logo"], [id*="logo"], [class*="brand"], [id*="brand"], .site-title');
+          if (isLogo) return NodeFilter.FILTER_REJECT;
+
+          // 4. UI Elements (Buttons, Forms, Modals)
+          if (parent.closest('button, form, input, select, textarea, [role="button"], [role="menu"], [role="dialog"], [class*="modal"], [class*="popup"]')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          // 5. Short "Random Link" Heuristics
+          // Skip short text inside <a> tags that are not part of an article or paragraph
+          const anchor = parent.closest('a');
+          if (anchor && text.length < 20) {
+            const container = anchor.parentElement;
+            if (container && !container.closest('p, article, section, .content, .article-body, .main')) {
+              return NodeFilter.FILTER_REJECT;
+            }
+          }
+
+          // 6. Common UI Label Exclusions
+          const uiLabels = /^(search|menu|login|sign up|sign in|close|subscribe|next|previous|back|top|home|skip to content)$/i;
+          if (uiLabels.test(text)) return NodeFilter.FILTER_REJECT;
 
           return NodeFilter.FILTER_ACCEPT;
         }
