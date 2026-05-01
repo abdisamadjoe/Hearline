@@ -33,7 +33,7 @@ No account required. No data sent anywhere.
 
 ### Option 1: Chrome Web Store (Recommended)
 
-[Click here to install Hearline](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
+[Click here to install Hearline](https://chromewebstore.google.com/detail/hearline-%E2%80%94-listen-to-any/nnmhcmenlidkfjnhnlmppfkppefeepkb)
 
 ### Option 2: Manual Install
 
