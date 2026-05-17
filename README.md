@@ -2,7 +2,7 @@
 
 **Hearline reads any webpage, article or blog out loud with real-time word highlighting.**
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-yellow?logo=googlechrome)](https://chrome.google.com/webstore/detail/hearline/YOUR-EXTENSION-ID-HERE)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-yellow?logo=googlechrome)](https://chromewebstore.google.com/detail/hearline-%E2%80%94-listen-to-any/nnmhcmenlidkfjnhnlmppfkppefeepkb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0-green)]()
 
